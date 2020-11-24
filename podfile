@@ -1,0 +1,6 @@
+platform :ios,'9.0'
+target:'lanhailieren' do
+pod "SDWebImage"
+pod 'CLPlayer'
+pod 'AFNetworking', '~> 4.0'
+end

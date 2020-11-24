@@ -1,0 +1,144 @@
+//
+//  PrefixHeader.pch
+//  lanhailieren
+//
+//  Created by aaa on 2020/3/5.
+//  Copyright © 2020 mcb. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIMacro.h"
+#import "TestMacro.h"
+#import "SettingMacro.h"
+#import "QuestionMacro.h"
+#import "NotificaitonMacro.h"
+#import "NetMacro.h"
+#import "MainViewMacro.h"
+#import "CommonMacro.h"
+#import "UIView+HDExtension.h"
+#import "UIImageView+WebCache.h"
+#import "SDWebImageManager.h"
+#import "SDImageCache.h"
+#import "SDWebImageDownloader.h"
+#import "SVProgressHUD.h"
+#import "MJRefresh.h"
+#import "AppDelegate.h"
+#import "JSONKit.h"
+#import "DateUtility.h"
+#import "DBManager.h"
+#import "UserManager.h"
+//#import "FailView.h"
+#import "TeamHitBarButtonItem.h"
+//#import "TestManager.h"
+#import "UIUtility.h"
+#import "NSString+MD5.h"
+#import "UIImage+Base64.h"
+#import "ViewController.h"
+#import "CountDown.h"
+#import "HttpUploaderManager.h"
+//#import <RongIMKit/RongIMKit.h>
+//#import "RCDLive.h"
+#import "WXApi.h"
+#import "WXApiRequestHandler.h"
+#import "WXApiManager.h"
+#import "UIViewController+Cloudox.h"
+#import "UINavigationController+Cloudox.h"
+#import "NSDictionary+JsonString.h"
+//#import "TUIKit.h"
+#import "SoftManager.h"
+#import "LeftBar.h"
+#import "InputView.h"
+#import "LogoView.h"
+#import "ViewController.h"
+#import "HYSegmentedControl.h"
+#import "SearchHeaderView.h"
+
+#import <MAMapKit/MAMapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import "ChooceStoreView.h"
+#define kTestImageUri_1 @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583823033016&di=0823fe508155bec7aab1274a9c00cc2f&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F68%2F61%2F300000839764127060614318218_950.jpg"
+#define kTestImageUri_2 @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583823033015&di=ec85c2224ceacefccba3dca9c265ce12&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg"
+typedef enum : NSUInteger {
+    LivingPlayType_order,
+    LivingPlayType_ordered,
+    LivingPlayType_living,
+    LivingPlayType_videoBack,
+} LivingPlayType;
+
+typedef enum : NSUInteger {
+    p_a_yModeType_zhi_f_b,
+    p_a_yModeType_wechat,
+    p_a_yModeType_yue,
+} p_a_yModeType;
+
+typedef enum : NSUInteger {
+    FoodOperationType_good,
+    FoodOperationType_Comment,
+    FoodOperationType_collection,
+    FoodOperationType_share,
+    FoodOperationType_customMade,
+} FoodOperationType;
+
+
+typedef NS_ENUM(NSInteger, GestureType) {
+    
+    TapGesType = 1,
+    LongGesType,
+    
+};
+
+#define TableHeader 43
+#define PlaceHolder @" "
+#define offSet_X 67
+#define offSet_X_right 20
+#define ShowImage_H ((screenWidth - 15 - 2 * offSet_X_right) / 3)
+#define EmotionItemPattern  @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]" //@"\\[em:(\\d+):\\]"
+#define Emoilbiew @"\\[0-9]\\"
+
+#define screenWidth  [UIScreen mainScreen].bounds.size.width
+#define screenHeight  [UIScreen mainScreen].bounds.size.height
+// 屏幕高度
+#define SCREEN_HEIGHT         [[UIScreen mainScreen] bounds].size.height
+// 屏幕宽度
+#define SCREEN_WIDTH          [[UIScreen mainScreen] bounds].size.width
+
+#define LUCKYLINECOLOR [UIColor colorWithRed:0.851 green:0.510 blue:0.329 alpha:1]
+#define limitline 4
+#define kSelf_SelectedColor [UIColor colorWithWhite:0 alpha:0.4] //点击背景  颜色
+#define kUserName_SelectedColor [UIColor colorWithWhite:0 alpha:0.25]//点击姓名颜色
+#define DELAYEXECUTE(delayTime,func) (dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{func;}))
+#define AttributedImageNameKey      @"ImageName"
+#define IS_PAD ([[UIDevice currentDevice].model isEqualToString:@"iPad"])
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define kContentText1 @"思想不会流血，不会感到痛苦，思想不会死去"
+
+#define kContentText2 @"这张面具之下，不是肉体，而是一种思想但思想是不怕子弹的"
+
+#define kContentText3 @"Most people are so ungrateful to be alive. But not you. Not anymore. "
+
+#define kContentText4 @"活着本来没有什么意义，但只要活着就会发现很多有趣的13688919929事，就像你发现了花，我又发现你一样[em:03:]。"
+
+#define kContentText5 @"地狱的房间已满，于是，[em:02:][em:02:]死亡爬上了人间如果一个人觉得他自己死的很不值,就会把诅咒留在他生前接触过的地方[em:02:]只要有人经过这些地方[em:02:]就会被咒语套中如果一个人觉得他自己死的很不值,就会把诅咒留在他生前接触过的地方[em:02:]只要有人经过这些地方[em:02:]就会被咒语套中如果一个人觉得他自己死的很不值,就会把诅咒留在他生前接触过的地方[em:02:]只要有人经过这些地方[em:02:]就会被咒语套中如果一个人觉得他自己死的很不值,就会把诅咒留在他生前接触过的地方[em:02:]只要有人经过这些地方[em:02:]就会被咒语套中"
+
+#define kContentText6 @"如果一个人觉得他自己死的很不值,就会把诅咒留在他生前接触过的地方[em:02:]只要有人经过这些地方[em:02:]就会被咒语套中"
+
+#define kShuoshuoText1 @"驱魔人 “你可知道邪恶深藏于你心深处，但我会始终在你的[em:02:]左右，握着我的手，我会让你看到神迹，抱紧信仰，除此你一无所有！”"
+
+#define kShuoshuoText2 @"李太啊，我的饺子最好吃，劲道、柔软、不露馅[em:03:]揉面的时候要一直揉到面团表面象剥了壳的鸡蛋，吃起来一包鲜汁"
+
+#define kShuoshuoText3 @"如果晚上月亮升起的时候，月光www.baidu.com照到我的门口，我希望[em:03:]月光www.baidu.com女神能满足我一个愿望，我想要一双人类的手。我想用我的双手把我的爱人紧紧地拥在怀中，哪怕只有一次。如果我从来没有品尝过温暖的感觉，也许我不会这样寒冷；如果我从没有感受过爱情的甜美，我也许就不会这样地痛苦。如果我没有遇到善良的佩格，如果我从来不曾离开过我的房间，我就不会知道我原来是这样的孤独"
+
+#define kShuoshuoText4 @"人有的时候很脆弱，会遇到很多不如意18618881888的事，日积月累就会形成心结，就算想告诉亲戚朋友，他们也未必懂得怎样[em:03:]开解"
+
+#define kShuoshuoText5 @"如果是像金钱这种东西被抢走的话，再抢[em:03:]回来就好了！但如果是人性或温暖的心的话……那就只有遇上心中同样是空虚的人，才有www.baidu.com办法帮你填补起内心的空洞"
+
+#define kShuoshuoText6 @"双目瞪人玛[em:03:]丽肖,傀儡为子常怀抱,汝辈小儿需切记,梦中遇她莫尖叫"
+
+
+#endif /* PrefixHeader_pch */
